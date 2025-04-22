@@ -7,6 +7,7 @@
     using CrudOperations.Data;
     using CrudOperations.Models;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.EntityFrameworkCore;
 
     [ApiController]
     [Route("api/[controller]")]
@@ -21,7 +22,29 @@
             _context = context;
         }
 
-        [HttpPost("login")]
+    [HttpPost("register")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Register([FromBody] RegisterRequest request)
+    {
+        // Check if user already exists
+        if (_context.Users.Any(u => u.Username == request.Username))
+            return BadRequest("Username already exists.");
+
+        // You can hash the password here (optional but recommended)
+        var newUser = new Users
+        {
+            Username = request.Username,
+            Password = request.Password // 🔐 In production, hash this
+        };
+
+        _context.Users.Add(newUser);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "User registered successfully" });
+    }
+
+
+    [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login([FromBody] UserLogin login)
         {
@@ -66,5 +89,9 @@
         public string Password { get; set; }
     }
 
-
+public class RegisterRequest
+{
+    public string Username { get; set; }
+    public string Password { get; set; }
+}
 
