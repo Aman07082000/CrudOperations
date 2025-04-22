@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{7638E674-6B11-400E-AC97-0E2CF2C5F748}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CrudOperations PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/AppDbContext.cs">
+    <Files>
+      <File FileName="CrudOperations.csproj" Line="15" Column="38" />
+      <File FileName="Program.cs" Line="19" Column="35" />
+      <File FileName="appsettings.json" Line="13" Column="2" />
+      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Data/AppDbContext.cs" Line="18" Column="1" />
+      <File FileName="Controllers/WeatherForecastController.cs" Line="39" Column="68" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="Models/Products.cs" Line="14" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CrudOperations" expanded="True">
+            <Node name="CrudOperations" selected="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
