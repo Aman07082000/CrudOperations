@@ -1,10 +1,14 @@
 ﻿using CrudOperations.Data;
 using CrudOperations.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CrudOperations.Controllers;
 
+
+
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ProductsController : ControllerBase
